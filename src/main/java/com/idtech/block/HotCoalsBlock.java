@@ -10,21 +10,20 @@ import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.material.Material;
 
-public class RubberBlock extends Block
-{
-  private static Properties properties = Properties.of(Material.STONE);
+public class HotCoalsBlock extends Block {
 
-  public static Block INSTANCE = new RubberBlock(properties).setRegistryName(BaseMod.MODID, "rubber");
+  private static Properties properties = Properties.of(Material.STONE);
+  public static Block INSTANCE = new HotCoalsBlock(properties).setRegistryName(BaseMod.MODID, "hotcoals");
   public static Item ITEM = BlockUtils.createBlockItem(INSTANCE, CreativeModeTab.TAB_MISC);
 
-  public RubberBlock(Properties properties) {
+
+  public HotCoalsBlock(Properties properties) {
     super(properties);
   }
 
   @Override
   public void stepOn(Level levelIn, BlockPos posIn, BlockState blockStateIn, Entity entityIn) {
     super.stepOn(levelIn, posIn, blockStateIn, entityIn);
-    entityIn.setDeltaMovement(0,10,0);
+    entityIn.setSecondsOnFire(1);
   }
-
 }

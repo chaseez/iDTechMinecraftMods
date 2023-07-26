@@ -21,14 +21,15 @@ public class BlockMod {
     public static final Item GEL_ORE_BLOCK_ITEM = BlockUtils.createBlockItem(GEL_ORE_BLOCK, CreativeModeTab.TAB_MISC);
 
 
-
     @SubscribeEvent
     public static void registerBlockItems(RegistryEvent.Register<Item> event) {
 
         event.getRegistry().register(CASTLE_WALL_ITEM);
         event.getRegistry().register(GEL_ORE_BLOCK_ITEM);
         event.getRegistry().register(CreepingMoldBlock.ITEM);
+        event.getRegistry().register(CreeperSurpriseBlock.ITEM);
         event.getRegistry().register(RubberBlock.ITEM);
+        event.getRegistry().register(HotCoalsBlock.ITEM);
 
     }
 
@@ -39,6 +40,8 @@ public class BlockMod {
         event.getRegistry().register(GEL_ORE_BLOCK);
         event.getRegistry().register(RubberBlock.INSTANCE);
         event.getRegistry().register(CreepingMoldBlock.INSTANCE);
+        event.getRegistry().register(CreeperSurpriseBlock.INSTANCE);
+        event.getRegistry().register(HotCoalsBlock.INSTANCE);
     }
 }
 
