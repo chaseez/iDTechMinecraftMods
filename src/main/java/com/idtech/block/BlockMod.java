@@ -28,6 +28,7 @@ public class BlockMod {
         event.getRegistry().register(CASTLE_WALL_ITEM);
         event.getRegistry().register(GEL_ORE_BLOCK_ITEM);
         event.getRegistry().register(CreepingMoldBlock.ITEM);
+        event.getRegistry().register(RubberBlock.ITEM);
 
     }
 
@@ -36,6 +37,7 @@ public class BlockMod {
 
         event.getRegistry().register(CASTLE_WALL);
         event.getRegistry().register(GEL_ORE_BLOCK);
+        event.getRegistry().register(RubberBlock.INSTANCE);
         event.getRegistry().register(CreepingMoldBlock.INSTANCE);
     }
 }
